@@ -1,0 +1,60 @@
+/*Header*/
+header {
+	height: 68px;
+	background-color: #7EC0EE;
+	border-bottom: solid 5px #fff;
+}
+
+header img {
+	float: right;
+}
+
+/*Body*/
+#contentDisplay {
+	height: 100vh;
+	width: 100%;
+	background: linear-gradient(#0077be, #317873);
+	text-align: right;
+}
+
+.imageRow {
+/*	background: rgba(0, 0, 0, 0.3);*/
+	padding-top: 26px;
+	/*transform: rotate(7deg)*/
+}
+#contentDisplay img {
+	/*transform: rotate(7deg);*/
+}
+
+/*Footer*/
+footer {
+	position: fixed;
+	bottom: 0;
+	height: 5%;
+	width: 100%;
+	background: #c2b280;
+	border-top: solid 2px #000;
+}
+
+/*Images*/
+#contentDisplay img {
+	margin: 10px;
+	border: solid 5px #000;
+	border-radius: 20px;
+}
+
+/*Font stuff*/
+h1 {
+	font-family: 'Libre Barcode 39 Text', cursive;
+	text-align: center;
+	font-size: 50px;
+	padding-top: 15px;
+}
+
+h6 {
+	font-family: 'Libre Barcode 39 Text', cursive;
+	text-align: right;
+	font-size: 100%;
+	margin-top: 1%;
+	margin-right: 1%;
+}
