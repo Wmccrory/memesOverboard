@@ -11,6 +11,24 @@ header img {
 	float: right;
 }
 
+form {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+input[type=text] {
+	width: 20em;
+}
+
+#buttonDisplay {
+	float: right;
+}
+
+.meme {
+	margin: 0 5px;
+}
+
 /*Body*/
 
 body {
@@ -69,8 +87,8 @@ h6 {
 .rating {
 	font-family: 'Libre Barcode 39 Text', cursive;
 	color: #fff;
-/*	font-size: .5em;*/
-	position: relative;
+	font-size: .5em;
+/*	position: relative;
 	top: 50px;
-	left: 150px;
+	left: 150px;*/
 }
