@@ -13,6 +13,8 @@ memeArray =
 var memeHold; //variable pushing user entry into memeArray
 var memeCall; //variable making API call
 var queryUrl; //url mixed with memeCall to make ajax call
+var animation;
+var state
 
 //function bank/////////////////////////////////////////////
 
@@ -68,20 +70,33 @@ function memeClick ()
 		var p = $("<p class='rating'>").text(rating);
 		var gifImage = $("<img class='gifimage'>");
 		gifImage.attr("src", results[i].images.downsized_still.url);
+		gifImage.attr("data-still", results[i].images.downsized_still.url);
+		gifImage.attr("data-animate", results[i].images.downsized.url);
+		gifImage.attr("data-state", "still");
 		gifDiv.append(p);
 		gifDiv.append(gifImage);
 
 		$("#contentDisplay").prepend(gifDiv);
 		$(gifDiv).css("transform", "rotate(" + Math.floor(Math.random() * 360) + "deg)");
-
-		$(".gifimage").on("click", function () 
-	{
-		console.log("test");
-		$(this).css("transform", "rotate(" + Math.floor(Math.random() * 3600) + "deg)");
-	});
 	}
 	});
-}	
+}
+
+// function gifClick () 
+// 	{
+		
+// 		if (state === "still")
+// 		{
+// 			$(this).attr("src", $(this).attr("data-animate"));
+// 			$(this).css("transform", "rotate(" + Math.floor(Math.random() * 3600) + "deg)");
+// 			$(this).attr("data-state", "animate");
+// 		}
+// 		else
+// 		{
+// 			$(this).attr("src", $(this).attr("data-still"));
+// 			$(this).attr("data-state", "still");
+// 		}
+// 	};	
 
 //rotation mechanics///////////////////////////////////////
 // $(".gifimage").on("click", function () 
@@ -107,4 +122,21 @@ $(document).on("click", ".meme", function()
 		$("#contentDisplay").empty()
 		memeCall = $(this).attr("dataname");
 		memeClick()
-	})
+	});
+
+$(document).on("click", ".gifimage", function ()
+	{
+		state = $(this).attr("data-state");
+		console.log(state);
+		if (state === "still")
+		{
+			$(this).attr("src", $(this).attr("data-animate"));
+			$(this).css("transform", "rotate(" + Math.floor(Math.random() * 3600) + "deg)");
+			$(this).attr("data-state", "animate");
+		}
+		else
+		{
+			$(this).attr("src", $(this).attr("data-still"));
+			$(this).attr("data-state", "still");
+		}
+	});
