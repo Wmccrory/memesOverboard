@@ -53,7 +53,7 @@ function userMemeEntry ()
 
 function memeClick ()
 {
-	queryUrl = "http://api.giphy.com/v1/gifs/search?q=" + memeCall + "&api_key=HlEjuHx3lHWzMbqf3OqvY4znmnCFHOsX"
+	queryUrl = "https://api.giphy.com/v1/gifs/search?q=" + memeCall + "&api_key=HlEjuHx3lHWzMbqf3OqvY4znmnCFHOsX"
 	$.ajax
 	({
 		url: queryUrl,
