@@ -82,28 +82,14 @@ function memeClick ()
 	});
 }
 
-// function gifClick () 
-// 	{
-		
-// 		if (state === "still")
-// 		{
-// 			$(this).attr("src", $(this).attr("data-animate"));
-// 			$(this).css("transform", "rotate(" + Math.floor(Math.random() * 3600) + "deg)");
-// 			$(this).attr("data-state", "animate");
-// 		}
-// 		else
-// 		{
-// 			$(this).attr("src", $(this).attr("data-still"));
-// 			$(this).attr("data-state", "still");
-// 		}
-// 	};	
+//modal
+$("#close").click(function() {
+	$("#modalBackground").fadeOut(1000);
+});
 
-//rotation mechanics///////////////////////////////////////
-// $(".gifimage").on("click", function () 
-// 	{
-// 		console.log("test");
-// 		$(this).css("transform", "rotate(" + Math.floor(Math.random() * 3600) + "deg)");
-// 	});
+$("#modalBackground").click(function() {
+	$("#modalBackground").fadeOut(1000);
+});
 
 //site progression///////////////////////////////////////
 window.onload = function() 
